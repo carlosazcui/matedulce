@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El mayor en el Vector</title>
+</head>
+
+<body>
+    <script>
+        // creo el array para 5 lugares y los cargo
+        var vector =new Array;
+        for (var i=0; i<5; i++)
+        {
+            
+            //le solicito que ingrese en el ORDEN de 1 hasta 5 nros...
+            vector[i]=parseInt(prompt(`Intrudicir el ${vector,i+1}° número de 5:`));
+            
+           
+            
+        }
+
+        // recorro y decreto que el 1er lugar "[0]" es el mayor para compararlo con los otros 
+        var mayornro=vector[0];
+        var contador=1; //uso esta variable para incrementar y poder así recorrer todo el vector
+        var posicionmayor=0;
+        while(contador<5)
+        {
+            if(vector[contador]>mayornro) //pregunto si en esa posición es mayor que el mayornro y si es así le asigno ya como nuevo mayor
+            {
+                mayornro=vector[contador];
+                posicionmayor=contador;
+                
+
+            }
+            contador++; // incremento en 1 el contador para que haga el corte del while
+            // console.log(contador);
+            // console.log(mayornro);
+            // console.log(posicionmayor);
+        }
+
+        console.log(`la posición en el vector donde está el Nro mayor es ${posicionmayor} y el Nro es ${mayornro}`)
+        alert(`La posición en el vector es ${posicionmayor}° y el Nro Mayor es ${mayornro}`)
+
+    </script>   
+
+
+
+
+</body>
+</html>
